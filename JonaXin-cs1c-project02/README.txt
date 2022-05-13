@@ -3,7 +3,7 @@ project folder: JonaXin-cs1c-project02\
 Brief description of submitted files:
 
 src/cs1c/TimeConverter.java
-    - Help output running time.
+    - Help output running time. Provided by Bita M
 
 src/subsetsum/ShoppingBag.java
     - Includes main() for debugging, asks user input.
