@@ -2,16 +2,16 @@ project folder: JonaXin-cs1c-project02\
 
 Brief description of submitted files:
 
-src/cs1c/TimeConverter.java
+src/TimeConverter.java
     - Help output running time. Provided by Bita M
 
-src/subsetsum/ShoppingBag.java
+src/ShoppingBag.java
     - Includes main() for debugging, asks user input. Template code provided by Bita M
 
-src/subsetsum/GroceriesFileReader.java
+src/GroceriesFileReader.java
     - Extracts information from the groceries file in the resources folder.
 
-src/subsetsum/SubsetSum.java
+src/SubsetSum.java
     - Returns subset that matches the budget most.
 
 resources/groceries.txt
