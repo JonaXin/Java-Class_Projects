@@ -25,14 +25,9 @@ public class ShoppingBag {
      * @param filePath The input file to parse.
      */
     public ShoppingBag(String filePath) {
-        // TODO: Define the class GroceriesFileReader
+
         GroceriesFileReader reader = new GroceriesFileReader();
 
-        // TODO: Define the readFile() method which reads the CSV (Comma Seperated Value) file
-        // of groceries and creates a specified ArrayList of grocery prices.
-        //
-        // NOTE: Catch all exceptions in the GroceriesFileReader readFile() method.
-        //       That means readFile() method should not throw an exception.
         priceOfGroceries = reader.readFile(filePath);
 
         // Check the size of the resulting ArrayList object.
@@ -64,10 +59,8 @@ public class ShoppingBag {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        // NOTE: Make sure to use *relative* path instead of specifying the entire path.
-        //       Otherwise, your program will result in run time errors when the instructor
-        //       tests your implementation.
-        final String FILEPATH = "resources/groceries.txt";
+        
+        final String FILEPATH = "groceries.txt";
 
         ShoppingBag bag = new ShoppingBag(FILEPATH);
         ArrayList<Double> shoppingList = bag.getPriceOfGroceries();
@@ -91,11 +84,6 @@ public class ShoppingBag {
 
         // capture the start time
         startTime = System.nanoTime();
-
-        // TODO: implement finding subset of groceries that is closest to meeting the user's budget.
-        // NOTE: In this part, you only need to keep track of the price of each item,
-        // 		 and not the name of the item you are buying.
-
 
         // stop the timer
         estimatedTime = System.nanoTime() - startTime;
