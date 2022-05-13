@@ -3,7 +3,7 @@ project folder: JonaXin-cs1c-project03\
 Brief description of submitted files:
 
 src/BrowserNavigation.java
-    - Includes main() for debugging, read input from the text file in the resources folder.
+    - Includes main() for debugging, read input from the text file in the resources folder. Template code provided by Bita M.
 
 src/Navigator.java
     - Simulates how a browser works.
