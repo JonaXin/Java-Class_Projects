@@ -11,16 +11,16 @@ src/cs1c/SongEntry.java
 src/cs1c/TimeConverter.java
     - The class that helps output the duration of each song. Provided by Bita M
 
-src/queues/Jukebox.java
+src/Jukebox.java
     - The class that simulates the function of adding a song to a playlist.
 
-src/queues/MyTunes.java
+src/MyTunes.java
     - Includes main() for debugging, read input from the text file in the resources folder.
 
-src/queues/Queue.java
+src/Queue.java
     - Includes methods that needed to build a queue, and two inner classes Node and QueueIterator.
 
-src/queues/TestMainForQueue.java
+src/TestMainForQueue.java
     - Test main() for Queue class.
 
 resources/music_genre_subset.json
