@@ -1,0 +1,9 @@
+link www.google.com
+link news.google.com
+link www.educationnews.org
+back
+back
+forward
+forward
+forward
+forward
