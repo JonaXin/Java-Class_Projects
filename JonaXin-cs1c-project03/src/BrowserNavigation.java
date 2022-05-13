@@ -15,36 +15,30 @@ public class BrowserNavigation
 {
     public static final boolean SHOW_DETAILS = true;
 
-    // TODO: Define your own singly linked list StackList class.
     // Two stacks: one for "Back" button links; another for "Forward" button links
     private StackList<String> backLinks;
     private StackList<String> forwardLinks;
 
     // the current webpage the user is viewing
     private String currentLink;
-
-    // TODO: Define the class Navigator that provides three navigation options where the user can:
-    //       1. Set the current link via setCurrentLink(linkName) method.
-    //       2. Replace the current link by going back one link via goBack() method.
-    //       3. Replace the current link by going forward one link via goForward() method.
+	
     private Navigator navigationFeature;
-
-    /**
-     * Sets up the navigation feature of the browser with empty back and forward links.
-     */
+	
+    // Sets up the navigation feature of the browser with empty back and forward links.
+    
     public BrowserNavigation()
     {
-        // TODO: Define the constructor of Navigator class so that it sets the currentLink to the empty String and
-        //       initializes two objects of type StackList(name) called backLinks and forwardLinks.
+        // Define the constructor of Navigator class so that it sets the currentLink to the empty String and
+        // initializes two objects of type StackList(name) called backLinks and forwardLinks.
         navigationFeature = new Navigator();
 
-        // TODO: Define the accessor method for the String representation of the currentLink.
+        // Define the accessor method for the String representation of the currentLink.
         this.currentLink = navigationFeature.getCurrentLink();
 
-        // TODO: Define the accessor method for the entire backLinks stack
+        // Define the accessor method for the entire backLinks stack
         this.backLinks = navigationFeature.getBackLinks();
 
-        // TODO: Define the accessor method for the entire forwardLinks stack
+        // Define the accessor method for the entire forwardLinks stack
         this.forwardLinks = navigationFeature.getForwardLinks();
     }
 
@@ -68,20 +62,18 @@ public class BrowserNavigation
         if (currentLink.contains(linkName))
             return true;
 
-        // TODO: Prior to calling search() method backLinks object should store a Stack of links.
+        // Prior to calling search() method backLinks object should store a Stack of links.
         Iterator<String> iterator = backLinks.iterator();
 
         // Iterates over the backLinks to see if link has been seens
         while (iterator.hasNext())
         {
-            // TODO: Make sure you do not add null objects to the StackList.
-            //       Otherwise, the below statement will result in NullPointerException.
             String walker = iterator.next();
             if (walker.equals(linkName))
                 return true;
         }
 
-        // TODO: Prior to calling search() method forwardLinks object should store a Stack of links.
+        // Prior to calling search() method forwardLinks object should store a Stack of links.
         iterator = forwardLinks.iterator();
 
         // Iterates over the forwardLinks to see if link has been seen.
@@ -104,8 +96,8 @@ public class BrowserNavigation
     {
         System.out.println("\n\n" + message);
 
-        // TODO: Define the accessor method to get a reference to the
-        //       immutable currentLink String object
+        // Define the accessor method to get a reference to the
+        // immutable currentLink String object
         this.currentLink = navigationFeature.getCurrentLink();
         System.out.println("Current Link: " + currentLink);
         System.out.println();
@@ -120,19 +112,11 @@ public class BrowserNavigation
      * one stack for back links and another stack for forward links.
      * Scans a plain text file to determine which links is the current link and whether to go
      * forward or backward. Also, search to determine whether a given link is the current
-     *  link or lies in the forward/back collections.
+     * link or lies in the forward/back collections.
      */
     public static void main(String[] args)
     {
-        // TODO: Test all features of the Navigator class
-        //       This includes testing for boundary conditions.
         final String FILENAME = "resources/links.txt";
-
-        // NOTE: An example of testing the boundary condition when back links stack is empty
-        //final String FILENAME = "resources/popEmptyBacklinkStack.txt";
-
-        // TODO: Provide test input files in addition to those provide.
-        // final String FILENAME = ??
 
         BrowserNavigation bn = new BrowserNavigation();
         Navigator navigator = bn.getNavigationFeature();
@@ -150,16 +134,16 @@ public class BrowserNavigation
                 line = input.nextLine();
                 String [] tokens = line.split(" ");
 
-                // Note: Once we see a new link. The forward link stack is not valid.
-                //       So, need to clear the forward links
+                // Once we see a new link. The forward link stack is not valid.
+                // So, need to clear the forward links
                 if (line.contains("link"))
                 {
                     String linkName = tokens[1];
 
-					/* TODO: Sets currentLink to the supplied link address. Places the
-				             old currentLink on the backLinks stack. Then, clears the
-				             forwardLinks stack.sets current link,
-					 */
+		    /* Sets currentLink to the supplied link address. Places the
+		     * old currentLink on the backLinks stack. Then, clears the
+		     * forwardLinks stack.sets current link,
+		     */
                     navigator.setCurrentLink(linkName);
 
                     if (SHOW_DETAILS)
@@ -167,9 +151,9 @@ public class BrowserNavigation
                     continue;
                 }
 
-                /* TODO: If there is a link on the backLinks stack, goes to the top link on the
-                 *       backLinks stack. Pushes the old currentLink onto the forwardLinks stack.
-                 *       Remember to check for boundary conditions.
+                /* If there is a link on the backLinks stack, goes to the top link on the
+                 * backLinks stack. Pushes the old currentLink onto the forwardLinks stack.
+                 * Remember to check for boundary conditions.
                  */
                 if (line.contains("back"))
                 {
@@ -180,9 +164,9 @@ public class BrowserNavigation
                     continue;
                 }
 
-                /* TODO: If there is a link on the forwardLinks stack, goes to the top link on the
-                 *       forwardLinks stack. Pushes the old currentLink onto the backLinks stack.
-                 *       Remember to check for boundary conditions.
+                /* If there is a link on the forwardLinks stack, goes to the top link on the
+                 * forwardLinks stack. Pushes the old currentLink onto the backLinks stack.
+                 * Remember to check for boundary conditions.
                  */
                 if (line.contains("forward"))
                 {
