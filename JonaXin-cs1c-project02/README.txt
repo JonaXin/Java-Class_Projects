@@ -6,7 +6,7 @@ src/cs1c/TimeConverter.java
     - Help output running time. Provided by Bita M
 
 src/subsetsum/ShoppingBag.java
-    - Includes main() for debugging, asks user input.
+    - Includes main() for debugging, asks user input. Template code provided by Bita M
 
 src/subsetsum/GroceriesFileReader.java
     - Extracts information from the groceries file in the resources folder.
