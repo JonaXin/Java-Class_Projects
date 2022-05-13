@@ -3,13 +3,13 @@ project folder: JonaXin-cs1c-project04\
 Brief description of submitted files:
 
 src/cs1c/MillionSongDataSubset.java
-    - Convert the JSON array that contains songs from the json file to a SongEntry type array.
+    - Convert the JSON array that contains songs from the json file to a SongEntry type array. Provided by Bita M.
 
 src/cs1c/SongEntry.java
-    - The class that helps store songs' information from the json file.
+    - The class that helps store songs' information from the json file. Provided by Bita M
 
 src/cs1c/TimeConverter.java
-    - The class that helps output the duration of each song.
+    - The class that helps output the duration of each song. Provided by Bita M
 
 src/queues/Jukebox.java
     - The class that simulates the function of adding a song to a playlist.
