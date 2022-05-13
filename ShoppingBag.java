@@ -8,11 +8,6 @@ import cs1c.TimeConverter;
 /**
  * An object of type ShoppingBag class creates an object of type subset sum to find a best
  * possible grocery shopping list within the given budget.
- * <p>
- * REMINDER: Include text cases in addition to those provided.
- * Do this by creating your own input file.
- * Test your implementation against various budgets, including boundary cases.
- *
  * @author Foothill College, Bita M, Jonathan
  */
 public class ShoppingBag {
@@ -39,7 +34,6 @@ public class ShoppingBag {
         System.out.printf("The list of groceries has %d items. \n", priceOfGroceries.size());
 
     }
-
 
     /**
      * Accessor method returns the list of items read from input file.
