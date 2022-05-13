@@ -105,9 +105,6 @@ public class MyTunes
         final String DATAFILE = "resources/music_genre_subset.json"; // Directory path for JSON file
         final String TESTFILE = "resources/tunes_truncated.txt";	// Directory path for plain-text file
 
-        // NOTE: An example of testing the boundary condition where we dequeue from empty playlist
-        //final String TESTFILE = "resources/tunes_truncated.txt";
-
         // parses the JSON input file
         MillionSongDataSubset msd = new MillionSongDataSubset(DATAFILE);
 
@@ -140,7 +137,6 @@ public class MyTunes
         Scanner keyboard = new Scanner(System.in);
         do
         {
-            // REMINDER: Test your implementation with different number of requested songs, including boundary cases.
             System.out.println("\nEnter your the number of songs you would like to play:");
         } while(!keyboard.hasNextDouble());
 
