@@ -1,0 +1,84 @@
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: resources/groceries.txt
+budget: 100
+
+NOTES: Testing target budget > sum of all elements.
+-----------------------------------------------------
+
+The list of groceries has 8 items.
+Groceries wanted:
+[2.5, 4.0, 11.5, 7.0, 15.0, 4.0, 6.0, 8.0]
+
+Enter your budget:
+100
+
+Algorithm Elapsed Time: 0 hrs : 0 mins : 0 sec : 0 ms : 300 ns
+Purchased grocery prices are:
+[2.5, 4.0, 11.5, 7.0, 15.0, 4.0, 6.0, 8.0]
+Done with ShoppingBag.
+
+
+---------------------------------------------------
+---------------------------------------------------
+Test file: resources/groceries.txt
+budget: 18
+
+NOTES: Testing set of elements found with sums
+       to exactly to target budget.
+---------------------------------------------------
+
+The list of groceries has 8 items.
+Groceries wanted:
+[2.5, 4.0, 11.5, 7.0, 15.0, 4.0, 6.0, 8.0]
+
+Enter your budget:
+18
+
+Algorithm Elapsed Time: 0 hrs : 0 mins : 0 sec : 0 ms : 200 ns
+Purchased grocery prices are:
+[4.0, 6.0, 8.0]
+Done with ShoppingBag.
+
+
+---------------------------------------------------
+---------------------------------------------------
+Test file: resources/groceries.txt
+budget: 17.9
+
+NOTES: Testing target budget returning closest match.
+---------------------------------------------------
+
+The list of groceries has 8 items.
+Groceries wanted:
+[2.5, 4.0, 11.5, 7.0, 15.0, 4.0, 6.0, 8.0]
+
+Enter your budget:
+17.9
+
+Algorithm Elapsed Time: 0 hrs : 0 mins : 0 sec : 0 ms : 200 ns
+Purchased grocery prices are:
+[2.5, 7.0, 8.0]
+Done with ShoppingBag.
+
+
+---------------------------------------------------
+---------------------------------------------------
+Test file: resources/groceries.txt
+budget: 1
+
+NOTES: Testing target budget less than any of the
+       item.
+---------------------------------------------------
+
+The list of groceries has 8 items.
+Groceries wanted:
+[2.5, 4.0, 11.5, 7.0, 15.0, 4.0, 6.0, 8.0]
+
+Enter your budget:
+1
+
+Algorithm Elapsed Time: 0 hrs : 0 mins : 0 sec : 0 ms : 200 ns
+Purchased grocery prices are:
+[]
+Done with ShoppingBag.
