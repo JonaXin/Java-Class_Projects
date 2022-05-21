@@ -1,5 +1,3 @@
-package lazyTrees;
-
 import java.util.*;
 import Traverser;
 
