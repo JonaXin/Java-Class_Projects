@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import cs1c.MillionSongDataSubset;
-import cs1c.SongEntry;
+import MillionSongDataSubset;
+import SongEntry;
 
 /**
  * Tests the functionality of FHhashQPwFind.java.
