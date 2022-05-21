@@ -1,5 +1,3 @@
-package lazyTrees;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
@@ -54,7 +52,7 @@ public class SuperMarket
 		{
 			inventory.insert(tmp);
 
-			// NOTE: Need to check if the item was lazily deleted, then we need to increment the count
+			// Need to check if the item was lazily deleted, then we need to increment the count
 			Item found = inventory.find(tmp);
 			if (found.getCount() == 0)
 			{
@@ -104,8 +102,8 @@ public class SuperMarket
 			inventory.remove(tmp);	
 
 			// keep track of how many items have been deleted so far.
-			// NOTE: Once this count reaches a threshold, we call cleanInventory()
-			//       to garbage collect the soft deleted nodes from the tree.
+			// Once this count reaches a threshold, we call cleanInventory()
+			// to garbage collect the soft deleted nodes from the tree.
 			countDeleted++;
 		}
 		// otherwise, simply decrement its count.
@@ -183,11 +181,9 @@ public class SuperMarket
 			return;
 
 		System.out.println( "\nTesting traversing \"hard\" inventory:");
-		// NOTE: Here, we call the public version.
 		inventory.traverseHard(printObject);
 
 		System.out.println( "\n\nTesting traversing \"soft\" inventory:");
-		// NOTE: Here, we call the public version.
 		inventory.traverseSoft(printObject);
 		System.out.println("\n");
 	}
@@ -195,12 +191,6 @@ public class SuperMarket
 	public static void main(String[] args) 
 	{
 		final String TESTFILE = "resources/inventory_invalid_removal.txt";	// Directory path for plain-text file
-
-		// NOTE: Short inventory file to test for removal of root node from LazySearchTree
-		//final String TESTFILE = "resources/inventory_short.txt";	
-
-		// NOTE: An example of testing the boundary condition when removing an item that may not exist
-		///final String TESTFILE = "resources/inventory_invalid_removal.txt";	
 
 		System.out.printf("Test file: %s \n", TESTFILE);
 
@@ -234,9 +224,6 @@ public class SuperMarket
 				if (selection.equals("add"))
 				{
 					market.addToInventory(itemName);
-
-					// NOTE: Currently displaying the contents is disabled to reduce cluttering the output.
-					// Suggestion: To start, enable displaying the contents of the tree to help you debug.
 					if (SHOW_DETAILS)
 						market.displayInventoryState("\nUpdate " + message, true);
 				}
@@ -245,22 +232,17 @@ public class SuperMarket
 				// Decrement the count of the item.
 				// If the item is out of stock, 
 				// remove the item from inventory.
-				//
-				// Note: buying an out of stock item, is invalid. Handle it appropriately.
 				else if (selection.equals("buy"))
 				{
 					try
 					{
 						market.removeFromInventory(itemName);
-
-						// NOTE: Currently displaying the contents is disabled to reduce cluttering the output.
-						// Suggestion: To start, enable displaying the contents of the tree to help you debug.
 						if (SHOW_DETAILS)
 							market.displayInventoryState("\nUpdate " + message, true);						
 					}
 					catch (java.util.NoSuchElementException ex)
 					{
-						// Note: Ideally we'd print to the error stream,
+						// Ideally we'd print to the error stream,
 						// but to allow correct interleaving of the output
 						// we'll use the regular output stream.
 						System.out.printf("\nWarning: Unable to fulfill request: %s \n", message);
