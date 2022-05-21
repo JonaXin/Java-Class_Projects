@@ -1,6 +1,4 @@
-package lazyTrees;
-
-import cs_1c.Traverser;
+import Traverser;
 
 import java.util.NoSuchElementException;
 
