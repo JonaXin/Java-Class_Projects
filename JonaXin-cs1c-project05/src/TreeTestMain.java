@@ -1,5 +1,3 @@
-package lazyTrees;
-
 /**
  * The test main() for the binary tree data structure.
  */
