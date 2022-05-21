@@ -1,5 +1,3 @@
-package lazyTrees;
-
 import Traverser;
 
 /**
