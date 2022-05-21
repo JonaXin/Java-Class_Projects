@@ -1,6 +1,3 @@
-package lazyTrees;
-
-
 /**
  * One object of Item class represents one item in the inventory, with two class members. 
  * 
