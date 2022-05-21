@@ -1,6 +1,6 @@
 package lazyTrees;
 
-import cs_1c.Traverser;
+import Traverser;
 
 /**
  * The class that uses traverser to print out all data in the tree.
