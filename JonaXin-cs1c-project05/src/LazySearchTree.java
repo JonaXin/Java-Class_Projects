@@ -1,7 +1,7 @@
 package lazyTrees;
 
 import java.util.*;
-import cs_1c.Traverser;
+import Traverser;
 
 /**
  * The basis of a binary tree data structure, contains several methods that
