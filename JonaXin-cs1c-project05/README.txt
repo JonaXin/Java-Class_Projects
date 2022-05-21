@@ -1,4 +1,4 @@
-project folder: JonaXin-cs1c-project05\
+project folder: JonaXin-cs1c-project05&06\
 
 Brief description of submitted files:
 
