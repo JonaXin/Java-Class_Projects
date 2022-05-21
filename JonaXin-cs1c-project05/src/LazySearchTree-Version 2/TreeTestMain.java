@@ -1,5 +1,3 @@
-package lazyTrees;
-
 /**
  * A simple test main() for the binary tree data structure, testing
  * the tree by soft deletion and then hard deletion.
