@@ -17,8 +17,6 @@ public class SuperMarket
 {
 	public static final boolean SHOW_DETAILS = true;
 
-	// Note: Each class must be placed in its own .java file unless explicitly
-	//       described as a nested class. See Program Guidelines for details.
 	PrintObject<Item> printObject = new PrintObject<Item>();
 
 	// The data structure, which we use to add and remove items.
@@ -50,7 +48,7 @@ public class SuperMarket
 		{
 			inventory.insert(tmp);
 
-			// NOTE: Need to check if the item was lazily deleted, then we need to increment the count
+			// Need to check if the item was lazily deleted, then we need to increment the count
 			Item found = inventory.find(tmp);
 			if (found.getCount() == 0)
 			{
@@ -164,12 +162,6 @@ public class SuperMarket
 	{
 		final String TESTFILE = "resources/inventory_invalid_removal.txt";	// Directory path for plain-text file
 
-		// NOTE: Short inventory file to test for removal of root node from LazySearchTree
-		//final String TESTFILE = "resources/inventory_short.txt";	
-
-		// NOTE: An example of testing the boundary condition when removing an item that may not exist
-		///final String TESTFILE = "resources/inventory_invalid_removal.txt";	
-
 		System.out.printf("Test file: %s \n", TESTFILE);
 
 		SuperMarket market = new SuperMarket();
@@ -200,9 +192,6 @@ public class SuperMarket
 				if (selection.equals("add"))
 				{
 					market.addToInventory(itemName);
-
-					// NOTE: Currently displaying the contents is disabled to reduce cluttering the output.
-					// Suggestion: To start, enable displaying the contents of the tree to help you debug.
 					if (SHOW_DETAILS)
 						market.displayInventoryState("\nUpdate " + message, true);
 				}
@@ -211,24 +200,16 @@ public class SuperMarket
 				// Decrement the count of the item.
 				// If the item is out of stock, 
 				// remove the item from inventory.
-				//
-				// Note: buying an out of stock item, is invalid. Handle it appropriately.
 				else if (selection.equals("buy"))
 				{
 					try
 					{
 						market.removeFromInventory(itemName);
-
-						// NOTE: Currently displaying the contents is disabled to reduce cluttering the output.
-						// Suggestion: To start, enable displaying the contents of the tree to help you debug.
 						if (SHOW_DETAILS)
 							market.displayInventoryState("\nUpdate " + message, true);						
 					}
 					catch (java.util.NoSuchElementException ex)
 					{
-						// NOTE: Ideally we'd print to the error stream,
-						//       but to allow correct interleaving of the output
-						//       we'll use the regular output stream.
 						System.out.printf("\nWarning: Unable to fulfill request: %s \n", message);
 						System.out.printf("Warning: Item %s is out of stock.\n", itemName);
 					}
