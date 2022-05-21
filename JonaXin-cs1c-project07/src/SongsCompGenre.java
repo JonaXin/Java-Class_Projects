@@ -1,6 +1,6 @@
 package hashTables;
 
-import cs1c.SongEntry;
+import SongEntry;
 import java.util.ArrayList;
 
 /**
