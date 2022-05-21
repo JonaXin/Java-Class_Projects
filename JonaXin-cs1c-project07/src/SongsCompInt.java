@@ -1,6 +1,6 @@
 package hashTables;
 
-import cs1c.SongEntry;
+import SongEntry;
 
 /**
  * The class that compares objects based on song IDs.
