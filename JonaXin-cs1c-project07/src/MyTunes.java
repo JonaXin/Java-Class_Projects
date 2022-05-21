@@ -13,21 +13,15 @@ import cs1c.SongEntry;
  * Tests the functionality of FHhashQPwFind.java.
  * Specifically checks for implementation of find() function to return an object associated with a given key input.
  *
- * @author Foothill College, Bita M [YOUR NAME HERE]
+ * @author Foothill College, Bita M, Jonathan Xin
  */
 public class MyTunes
 {
 	public static final boolean SHOW_DETAILS = false;
 
 	// Two hash tables of type FHhashQPwFind which extends parent class FHhashQP --------
-
-	// TODO: Define the wrapper class SongCompInt for SongEntry objects,
-	//       which would compare SongEntry objects based on the song's int id field.
 	private FHhashQPwFind<Integer, SongsCompInt>  tableOfSongIDs;
 
-	// TODO: Define the wrapper class SongCompGenre for SongEntry objects,
-	//       which would compare SongEntry objects based on the String genre field and
-	//       determines the number of songs in each genre.
 	private FHhashQPwFind<String, SongsCompGenre> tableOfGenres; 
 
 	// List of genres found while populating tableOfGenres field
@@ -42,18 +36,9 @@ public class MyTunes
 	 */
 	public MyTunes(SongEntry[] allSongs)
 	{		
-		// TODO: Define the TableGenerator class to have two class fields of type
-		//       FHhashQPwFind which extend the parent class FHhashQP.
-		TableGenerator g = new TableGenerator();
-
-		// TODO: Populates a hash table for comparing songs based on their int field ID.
+		TableGenerator g = new TableGenerator();	
 		tableOfSongIDs = g.populateIDtable(allSongs);
-
-		// TODO: Populates a hash table for comparing songs based on their String field genre.
-		//       Uses this table to also populates list of genre names with unique keys.
 		tableOfGenres = g.populateGenreTable(allSongs);		
-
-		// TODO: Return the unique genre names found when populating genre table
 		genreNames = g.getGenreNames();
 	}
 
@@ -219,8 +204,7 @@ public class MyTunes
 		final String TESTFILE01 = "resources/findIDs.txt";	// Example test file for hashing based on IDs
 		final String TESTFILE02 = "resources/findGenres.txt"; // Example test file for hashing based on genres names
 
-		// Note: This is similar to your previous projects.
-		//		 Placed in a separate method for readability.
+		// Placed in a separate method for readability.
 		// Parses the input file and stores all songs in an array of SongEntry object.
 		SongEntry [] allSongs = readSongsFromDataFile(DATAFILE);
 
